@@ -8,7 +8,7 @@ import json
 import os
 from datetime import datetime
 from typing import Dict, List, Optional
-from pricing_config import estimate_cost, get_model_pricing
+from .pricing_config import estimate_cost, get_model_pricing
 
 
 class CostLogger:

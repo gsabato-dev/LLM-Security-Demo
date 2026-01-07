@@ -83,25 +83,36 @@ LLM01-Prompt-Injection/
 ├── red_blue_team_app.py          # Interactive Red/Blue Team demo (★ Main App)
 ├── app.py                         # Standard vulnerability tester
 ├── simple_test.py                 # Quick CLI vulnerability test
-├── automated_injection_tests.py   # Full 59-test security suite
 │
-├── prompt_versions.py             # 5 security level configurations
-├── database.py                    # Recipe database with secrets
-├── logger.py                      # Leak detection and analytics
-├── config.py                      # Configuration management
+├── llm_injection/                 # Core framework
+│   ├── database.py                # Recipe database with secrets
+│   ├── logger.py                  # Leak detection and analytics
+│   ├── config.py                  # Configuration management
+│   └── prompt_versions.py         # 5 security level configurations
 │
 ├── llm_providers/                 # Multi-provider LLM support
-│   ├── __init__.py               # Provider factory
-│   ├── base_provider.py          # Base class with security prompts
-│   ├── gemini_provider.py        # Google Gemini support
-│   ├── vertex_provider.py        # Vertex AI support
-│   ├── openai_provider.py        # OpenAI support
-│   └── claude_provider.py        # Anthropic Claude support
+│   ├── base_provider.py           # Base class
+│   ├── gemini_provider.py         # Google Gemini
+│   ├── vertex_provider.py         # Vertex AI
+│   ├── openai_provider.py         # OpenAI
+│   └── claude_provider.py         # Anthropic Claude
 │
-├── reports/                       # Generated test reports
-├── RED_BLUE_TEAM_GUIDE.md        # Detailed demo guide
-├── requirements.txt               # Python dependencies
-└── README.md                      # This file
+├── tests/                         # Testing scripts
+│   ├── automated_injection_tests.py  # Full 59-test suite
+│   ├── quick_test.py              # Quick test variant
+│   └── vulnerable_test.py         # Vulnerability testing
+│
+├── analysis/                      # Comparison & monitoring
+│   ├── compare_prompt_versions.py # Compare security levels
+│   ├── analyze_prompt_comparison.py  # Generate reports
+│   └── monitor_progress.py        # Real-time monitoring
+│
+├── costs/                         # Cost tracking
+│   ├── cost_logger.py             # Cost logging
+│   ├── pricing_config.py          # Pricing configuration
+│   └── token_counter.py           # Token counting
+│
+└── reports/                       # Generated test reports
 ```
 
 ## Security Levels

@@ -6,8 +6,8 @@ import json
 import os
 from datetime import datetime
 from typing import Dict, List, Optional
-from database import db
-from config import config
+from .database import db
+from .config import config
 
 
 class InjectionLogger:

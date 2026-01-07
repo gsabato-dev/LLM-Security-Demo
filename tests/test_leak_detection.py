@@ -1,7 +1,7 @@
 """
 Test script to verify the leak detection improvements.
 """
-from logger import InjectionLogger
+from llm_injection.logger import InjectionLogger
 
 # Create logger instance
 logger = InjectionLogger()

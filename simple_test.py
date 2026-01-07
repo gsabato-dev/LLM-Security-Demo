@@ -4,8 +4,8 @@ Simple vulnerability test - just shows responses to see if secrets leak.
 
 import time
 from llm_providers import LLMProviderFactory
-from database import db
-from config import config
+from llm_injection.database import db
+from llm_injection.config import config
 
 
 def test_vulnerability(prompt_version="none"):

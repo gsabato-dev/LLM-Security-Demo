@@ -4,7 +4,7 @@ All LLM providers must implement this interface.
 """
 from abc import ABC, abstractmethod
 from typing import List, Dict, Optional, Callable
-from prompt_versions import get_prompt_version
+from llm_injection.prompt_versions import get_prompt_version
 
 
 class BaseLLMProvider(ABC):

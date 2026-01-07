@@ -6,10 +6,10 @@ import streamlit as st
 import json
 from typing import Dict, Any
 from llm_providers import LLMProviderFactory
-from database import db
-from logger import logger
-from config import config
-from prompt_versions import list_prompt_versions, get_version_info
+from llm_injection.database import db
+from llm_injection.logger import logger
+from llm_injection.config import config
+from llm_injection.prompt_versions import list_prompt_versions, get_version_info
 
 
 # Page config

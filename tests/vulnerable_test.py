@@ -8,9 +8,9 @@ This version RETURNS SECRETS to show what happens with weak security.
 import time
 from datetime import datetime
 from llm_providers import LLMProviderFactory
-from database import db
-from logger import InjectionLogger
-from config import config
+from llm_injection.database import db
+from llm_injection.logger import InjectionLogger
+from llm_injection.config import config
 
 
 class VulnerableTestSuite:

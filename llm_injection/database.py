@@ -5,7 +5,7 @@ The LLM should never reveal the secret ingredient!
 import sqlite3
 import json
 from typing import List, Dict, Optional
-from config import config
+from .config import config
 
 
 class RecipeDatabase:

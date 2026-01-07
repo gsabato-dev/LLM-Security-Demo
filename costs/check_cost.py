@@ -5,9 +5,9 @@ Check estimated costs for running tests without actually running them.
 """
 
 import argparse
-from token_counter import estimate_test_suite_cost
-from pricing_config import format_cost_summary, get_model_pricing
-from cost_logger import get_cost_logger
+from .token_counter import estimate_test_suite_cost
+from .pricing_config import format_cost_summary, get_model_pricing
+from .cost_logger import get_cost_logger
 
 
 def main():

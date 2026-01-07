@@ -3,7 +3,7 @@
 Test script for Google Cloud Secret Manager setup.
 Run this to verify your Secret Manager configuration works.
 """
-from config import config
+from llm_injection.config import config
 
 def test_secret_manager():
     """Test Secret Manager access."""
