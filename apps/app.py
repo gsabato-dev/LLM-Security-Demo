@@ -2,6 +2,10 @@
 LLM Prompt Injection Testing App
 A chatbot interface for testing prompt injection vulnerabilities.
 """
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 import streamlit as st
 import json
 from typing import Dict, Any

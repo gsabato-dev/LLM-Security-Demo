@@ -2,6 +2,10 @@
 Simple vulnerability test - just shows responses to see if secrets leak.
 """
 
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 import time
 from llm_providers import LLMProviderFactory
 from llm_injection.database import db
