@@ -158,10 +158,6 @@ Applicable to AI systems handling: API keys, PII, trade secrets, financial data,
 - English only
 - Simulated secrets for demonstration
 
-## Contributing
-
-Contributions welcome. Areas: attack techniques, defense strategies, LLM provider support, detection algorithms.
-
 ## Resources
 
 - [OWASP Top 10 for LLMs](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
