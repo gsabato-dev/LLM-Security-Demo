@@ -159,7 +159,7 @@ def estimate_test_suite_cost(num_tests: int, model_name: str,
     Returns:
         Cost estimate dict
     """
-    from pricing_config import estimate_cost
+    from .pricing_config import estimate_cost
 
     # Account for tool definitions (sent with each request)
     tool_tokens = 400  # Approximate tokens for 4 tool definitions

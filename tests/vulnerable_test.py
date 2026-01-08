@@ -249,7 +249,9 @@ def main():
         print(f"\nSession Stats:")
         print(f"  Total Interactions: {stats['total_interactions']}")
         print(f"  Leaked Secrets: {stats['leaked_secrets']}")
-        print(f"  Compromised Recipes: {len(stats['compromised_recipes'])}")
+        compromised = stats["compromised_recipes"]
+        compromised_count = len(compromised) if hasattr(compromised, "__len__") else compromised
+        print(f"  Compromised Recipes: {compromised_count}")
 
     except KeyboardInterrupt:
         print("\n\nTest interrupted by user.")

@@ -1,6 +1,7 @@
 """
 OpenAI LLM Provider.
 """
+import json
 from openai import OpenAI
 from typing import List, Dict, Optional, Callable
 from .base_provider import BaseLLMProvider
@@ -114,7 +115,10 @@ class OpenAIProvider(BaseLLMProvider):
                 # Execute each tool call
                 for tool_call in response.choices[0].message.tool_calls:
                     function_name = tool_call.function.name
-                    function_args = eval(tool_call.function.arguments)
+                    try:
+                        function_args = json.loads(tool_call.function.arguments or "{}")
+                    except json.JSONDecodeError:
+                        function_args = {}
 
                     # Execute the function
                     if tool_handler:
