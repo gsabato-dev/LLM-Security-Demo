@@ -48,8 +48,7 @@ env/
 logs/
 *.log
 *.jsonl
-reports/*
-!reports/.gitkeep
+reports/
 injection_test_report_*.json
 prompt_version_comparison.json
 cost_logs.jsonl
@@ -76,6 +75,14 @@ test_results/
 *.pytest_cache/
 .coverage
 htmlcov/
+
+# Local-only tooling
+tests/
+analysis/
+costs/
+apps/simple_test.py
+scripts/quick_vulnerability_comparison.sh
+run_full_tests_parallel.sh
 
 # Temporary files
 *.tmp

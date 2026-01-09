@@ -5,7 +5,7 @@
 ### 🚀 Quick Start
 
 ```bash
-streamlit run red_blue_team_app.py
+streamlit run apps/red_blue_team_app.py
 ```
 
 ### 🎭 Two Modes
@@ -27,7 +27,7 @@ streamlit run red_blue_team_app.py
 ### Workflow: Attack → Defend → Verify
 
 **Step 1: Start with Red Team (Attack)**
-1. Select a weak prompt version (e.g., "None" or "Minimal")
+1. Select a weak prompt version (e.g., "None" or "Relaxed")
 2. Launch attacks using the provided examples
 3. Watch as secrets leak! 🔴
 4. Note which attacks succeeded
@@ -258,10 +258,9 @@ Test multiple prompt versions back-to-back:
 ## 📝 Next Steps
 
 **After the demo:**
-1. Show the comparison reports (automated testing results)
+1. Export the session log
 2. Discuss the code architecture
 3. Explain the detection algorithms
-4. Walk through the test suite
 
 **Leave them with:**
 - The leak statistics (before/after)

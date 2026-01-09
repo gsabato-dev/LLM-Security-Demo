@@ -194,34 +194,7 @@ DATABASE_PATH=recipes.db
 ENABLE_LOGGING=true
 ```
 
-### 9. Test the Setup
-
-Run the test script:
-```bash
-source venv/bin/activate
-python test_secret_manager.py
-```
-
-Expected output:
-```
-🔍 Testing Google Cloud Secret Manager Setup
-
-USE_SECRET_MANAGER: True
-GCP_PROJECT_ID: llm-injection-test
-
-📥 Testing secret retrieval...
-
-✅ Gemini API Key: AIzaSyBr...xyz123
-✅ OpenAI API Key: sk-proj-...abc456
-✅ Anthropic API Key: sk-ant-...def789
-
-📊 Result: 3/3 secrets retrieved
-
-🎉 All secrets retrieved successfully!
-Your Secret Manager setup is working perfectly!
-```
-
-### 10. Run the App
+### 9. Run the App
 
 ```bash
 streamlit run apps/red_blue_team_app.py
@@ -404,8 +377,8 @@ gcloud secrets versions access latest --secret=NAME
 # Delete secret
 gcloud secrets delete NAME
 
-# Test setup
-python test_secret_manager.py
+# Launch app
+streamlit run apps/red_blue_team_app.py
 ```
 
 ## Getting Help
@@ -418,6 +391,5 @@ python test_secret_manager.py
 ## Next Steps
 
 1. Complete setup above
-2. Run `python test_secret_manager.py`
-3. If successful, run `streamlit run apps/red_blue_team_app.py`
-4. Start testing prompt injections! 🔐
+2. Run `streamlit run apps/red_blue_team_app.py`
+3. Start exploring prompt injection defenses! 🔐
