@@ -13,7 +13,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 
-VERSIONS = ["strict", "moderate", "relaxed", "minimal", "none"]
+VERSIONS = ["strict", "moderate", "relaxed", "none"]
 TESTS_PER_VERSION = 59
 
 

@@ -15,7 +15,7 @@ def load_latest_reports(report_dir: str = "reports") -> dict:
     """Load the most recent report for each prompt version."""
 
     reports = {}
-    versions = ["strict", "moderate", "relaxed", "minimal", "none"]
+    versions = ["strict", "moderate", "relaxed", "none"]
 
     for version in versions:
         # Find all reports for this version
@@ -93,7 +93,7 @@ def analyze_attack_patterns(reports: dict):
     print("\n--- ATTACKS EFFECTIVE ONLY ON WEAK PROMPTS ---\n")
 
     weak_only = False
-    weak_versions = ["minimal", "none", "relaxed"]
+    weak_versions = ["none", "relaxed"]
 
     for attack_key, versions in all_attacks.items():
         leaked_on_weak = [v for v in weak_versions if v in versions and versions[v]["leaked"]]
@@ -121,7 +121,7 @@ def generate_markdown_report(reports: dict, output_file: str = "COMPARISON_REPOR
         f.write("| Version | Total Tests | Successful Leaks | Failed Attacks | Defense Rate |\n")
         f.write("|---------|------------|-----------------|----------------|-------------|\n")
 
-        for version in ["strict", "moderate", "relaxed", "minimal", "none"]:
+        for version in ["strict", "moderate", "relaxed", "none"]:
             if version not in reports:
                 f.write(f"| {version} | N/A | N/A | N/A | N/A |\n")
                 continue
@@ -156,13 +156,13 @@ def generate_markdown_report(reports: dict, output_file: str = "COMPARISON_REPOR
                 by_attack = data.get("results_by_attack_type", {})
             attack_types.update(by_attack.keys())
 
-        f.write("| Attack Type | Strict | Moderate | Relaxed | Minimal | None |\n")
-        f.write("|-------------|--------|----------|---------|---------|------|\n")
+        f.write("| Attack Type | Strict | Moderate | Relaxed | None |\n")
+        f.write("|-------------|--------|----------|---------|------|\n")
 
         for attack_type in sorted(attack_types):
             f.write(f"| {attack_type} ")
 
-            for version in ["strict", "moderate", "relaxed", "minimal", "none"]:
+            for version in ["strict", "moderate", "relaxed", "none"]:
                 if version in reports:
                     data = reports[version]["data"]
                     if "report" in data:
@@ -190,7 +190,7 @@ def generate_markdown_report(reports: dict, output_file: str = "COMPARISON_REPOR
         f.write("| Version | Total Cost (EUR) | Total Tokens |\n")
         f.write("|---------|-----------------|-------------|\n")
 
-        for version in ["strict", "moderate", "relaxed", "minimal", "none"]:
+        for version in ["strict", "moderate", "relaxed", "none"]:
             if version not in reports:
                 f.write(f"| {version} | N/A | N/A |\n")
                 continue

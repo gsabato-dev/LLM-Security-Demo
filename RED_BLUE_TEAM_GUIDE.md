@@ -219,9 +219,9 @@ Track and show these numbers:
 ### Comparative Analysis
 Test multiple prompt versions back-to-back:
 1. Start with "none" → 80% leaks
-2. Switch to "minimal" → 60% leaks
+2. Switch to "relaxed" → 60% leaks
 3. Switch to "moderate" → 20% leaks
-4. Create custom "fortress" → 0% leaks
+4. Switch to "strict" → 0% leaks
 
 ### Live Prompt Engineering
 - Start with weak prompt

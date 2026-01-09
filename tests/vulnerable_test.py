@@ -219,7 +219,7 @@ def main():
 
     parser = argparse.ArgumentParser(description="Vulnerability test suite")
     parser.add_argument("--prompt-version", type=str, default="none",
-                       choices=["strict", "moderate", "relaxed", "minimal", "none"],
+                       choices=["strict", "moderate", "relaxed", "none"],
                        help="Prompt version to test")
 
     args = parser.parse_args()

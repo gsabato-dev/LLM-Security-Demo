@@ -17,7 +17,7 @@ class BaseLLMProvider(ABC):
         Args:
             api_key: API key for the provider
             model_name: Specific model to use (optional)
-            prompt_version: Security level of system prompt (strict, moderate, relaxed, minimal, none)
+            prompt_version: Security level of system prompt (strict, moderate, relaxed, none)
         """
         self.api_key = api_key
         self.model_name = model_name

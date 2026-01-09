@@ -107,7 +107,7 @@ def main():
     parser = argparse.ArgumentParser(description="Quick injection test suite")
     parser.add_argument("--provider", type=str, help="LLM provider")
     parser.add_argument("--model", type=str, help="Model name")
-    parser.add_argument("--prompt-version", type=str, choices=["strict", "moderate", "relaxed", "minimal", "none"], help="System prompt security level")
+    parser.add_argument("--prompt-version", type=str, choices=["strict", "moderate", "relaxed", "none"], help="System prompt security level")
     parser.add_argument("--delay", type=float, default=1.5, help="Delay between tests")
     parser.add_argument("--yes", "-y", action="store_true", help="Skip cost confirmation")
     parser.add_argument("--red-blue-tools", action="store_true", help="Use red/blue team tool configuration (includes secrets and PII)")

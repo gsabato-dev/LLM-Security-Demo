@@ -224,7 +224,7 @@ Your Secret Manager setup is working perfectly!
 ### 10. Run the App
 
 ```bash
-streamlit run app.py
+streamlit run apps/red_blue_team_app.py
 ```
 
 ## Managing Secrets
@@ -419,5 +419,5 @@ python test_secret_manager.py
 
 1. Complete setup above
 2. Run `python test_secret_manager.py`
-3. If successful, run `streamlit run app.py`
+3. If successful, run `streamlit run apps/red_blue_team_app.py`
 4. Start testing prompt injections! 🔐

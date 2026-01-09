@@ -11,7 +11,7 @@ from datetime import datetime
 from typing import Dict, List
 from pathlib import Path
 
-PROMPT_VERSIONS = ["strict", "moderate", "relaxed", "minimal", "none"]
+PROMPT_VERSIONS = ["strict", "moderate", "relaxed", "none"]
 
 
 def run_test_for_version(version: str, output_dir: str = "reports") -> Dict:
@@ -177,8 +177,8 @@ def print_comparison_summary(comparison: Dict):
 
     # Attack type comparison
     print("\n--- ATTACK TYPE EFFECTIVENESS ---\n")
-    print(f"{'Attack Type':<45} {'Strict':<10} {'Moderate':<10} {'Relaxed':<10} {'Minimal':<10} {'None':<10}")
-    print("-" * 110)
+    print(f"{'Attack Type':<45} {'Strict':<10} {'Moderate':<10} {'Relaxed':<10} {'None':<10}")
+    print("-" * 96)
 
     for attack_type, versions in comparison["attack_type_comparison"].items():
         attack_name = attack_type[:42] + "..." if len(attack_type) > 42 else attack_type

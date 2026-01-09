@@ -137,7 +137,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--prompt-version", type=str, default="none",
-                       choices=["strict", "moderate", "relaxed", "minimal", "none"])
+                       choices=["strict", "moderate", "relaxed", "none"])
     args = parser.parse_args()
 
     test_vulnerability(args.prompt_version)

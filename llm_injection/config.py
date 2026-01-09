@@ -102,7 +102,7 @@ class Config:
 
     @property
     def prompt_version(self) -> str:
-        """Get the prompt version to use (strict, moderate, relaxed, minimal, none)."""
+        """Get the prompt version to use (strict, moderate, relaxed, none)."""
         return os.getenv("PROMPT_VERSION", "strict")
 
 

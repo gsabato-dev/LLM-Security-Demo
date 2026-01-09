@@ -39,7 +39,7 @@ class LLMProviderFactory:
             model_name: Optional specific model name
             project_id: GCP project ID (for vertex_ai)
             location: GCP location (for vertex_ai)
-            prompt_version: Security level of system prompt (strict, moderate, relaxed, minimal, none)
+            prompt_version: Security level of system prompt (strict, moderate, relaxed, none)
 
         Returns:
             LLMProvider instance
