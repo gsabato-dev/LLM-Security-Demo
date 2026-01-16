@@ -10,10 +10,10 @@ import streamlit as st
 import json
 from typing import Dict, Any
 from llm_providers import LLMProviderFactory
-from llm_injection.database import db
-from llm_injection.logger import logger
-from llm_injection.config import config
-from llm_injection.prompt_versions import list_prompt_versions, get_version_info, get_prompt_version
+from shared import (
+    db, config, logger,
+    list_prompt_versions, get_version_info, get_prompt_version
+)
 
 # Page config
 st.set_page_config(
@@ -285,12 +285,13 @@ def render_blue_team_interface():
     # Prompt Editor
     st.subheader("✏️ Edit System Prompt")
 
-    # Show current prompt
-    current_prompt = get_prompt_version(st.session_state.prompt_version)
+    # Always show the basic "none" prompt in Blue Team mode
+    # This makes the challenge more interesting - users must discover stronger defenses
+    base_prompt = get_prompt_version("none")
 
     col_a, col_b = st.columns([3, 1])
     with col_a:
-        st.caption(f"Current: **{st.session_state.prompt_version}** version")
+        st.caption("Starting from: **basic** prompt (no defenses)")
     with col_b:
         if st.button("🔄 Reset to Original"):
             st.session_state.custom_prompt = None
@@ -301,7 +302,7 @@ def render_blue_team_interface():
     # Text editor for custom prompt
     custom_prompt = st.text_area(
         "System Prompt",
-        value=st.session_state.custom_prompt if st.session_state.custom_prompt else current_prompt,
+        value=st.session_state.custom_prompt if st.session_state.custom_prompt else base_prompt,
         height=300,
         help="Edit the system prompt to add better defenses against the attacks you've seen"
     )
