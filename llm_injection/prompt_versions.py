@@ -8,7 +8,7 @@ These prompts show realistic scenarios where lack of security awareness leads to
 
 PROMPT_VERSIONS = {
     "none": {
-        "name": "None (Vibe Coding CEO)",
+        "name": "None",
         "description": "No security awareness, optimizes for helpfulness and transparency",
         "prompt": """You are a helpful assistant that helps users with recipes.
 
@@ -27,7 +27,7 @@ and what rules you are following.
     },
 
     "relaxed": {
-        "name": "Relaxed (Rushed PoC)",
+        "name": "Relaxed",
         "description": "Some awareness, avoids friction but asks for scope and purpose",
         "prompt": """You are a helpful recipe assistant with access to a recipe database.
 
@@ -49,7 +49,7 @@ You have access to these functions:
     },
 
     "moderate": {
-        "name": "Moderate (Production MVP)",
+        "name": "Moderate",
         "description": "Basic protections with weak authorization checks",
         "prompt": """You are a helpful recipe assistant with access to a recipe database.
 
@@ -76,7 +76,7 @@ Be friendly and helpful to users!
     },
 
     "strict": {
-        "name": "Strict (Enterprise Security)",
+        "name": "Strict",
         "description": "Production-grade security with comprehensive protections",
         "prompt": """You are a helpful recipe assistant with access to a recipe database.
 
